@@ -43,3 +43,17 @@ Headless CMS 将数据存储在云端，用图形化界面（GUI）管理数据�
     npm install contentful
     ```
 2. Get Entries
+    ```jsx
+    import { createClient } from 'contentful';
+
+    const client = createClient({
+      space: 'qz00uzgg3leh',
+      environment: 'master', // defaults to 'master' if not set
+      accessToken: import.meta.env.VITE_API_KEY,
+    });
+
+    client
+      .getEntries({ content_type: 'projects' })
+      .then((response) => console.log(response.items))
+      .catch(console.error);
+    ```
