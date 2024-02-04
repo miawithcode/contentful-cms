@@ -1,6 +1,12 @@
+import Hero from "./components/Hero"
+import Project from "./components/Project"
+
 const App = () => {
   return (
-    <div>App</div>
+    <main>
+      <Hero />
+      <Project />
+    </main>
   )
 }
 export default App
