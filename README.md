@@ -1,5 +1,10 @@
 # Contentful CMS
 
+<div align="center">
+  <img src="./public/screenshot.png" alt="demo screenshot">
+  <a href="https://contentful-cms-iota.vercel.app/">Demo</a>
+</div>
+
 ## SVG Resource
 
 [Undraw](https://undraw.co/)
@@ -57,3 +62,11 @@ Headless CMS 将数据存储在云端，用图形化界面（GUI）管理数据�
       .then((response) => console.log(response.items))
       .catch(console.error);
     ```
+
+## Webhooks
+
+> Allowing us to dynamically build our application on {Netlify} every time we make come changes to our data in Contentful
+
+1. 在已经部署到 Netlify 或 Vercel 的网站设置中，找到 Build Hooks / Deploy Hooks
+2. 创建 Build Hooks / Deploy Hooks 会得到一个 Unique URL，复制
+3. 在 Contentful 的 settings 中找到 Webhooks，把刚刚复制的链接填入 URL
